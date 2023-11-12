@@ -1,0 +1,122 @@
+/* Fullscreen container for binary rain */
+#binary-rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    z-index: -1; /* Make sure it's behind other content */
+}
+
+/* Style for binary drops */
+.binary-drop {
+    position: absolute;
+    color: green;
+    font-family: monospace;
+    animation: fall linear infinite;
+}
+
+/* Animation for falling effect */
+@keyframes fall {
+    0% { top: -10%; }
+    100% { top: 110%; }
+}
+/* Base styles for the navigation bar */
+nav {
+    position: relative;
+    width: 25%; /* Adjust the width as per your requirement */
+    background: #333; /* dark background for the nav bar */
+    border-radius: 8px; /* rounded corners */
+    padding: 10px; /* some padding around the nav */
+    box-sizing: border-box; /* ensures padding is included in width */
+    margin: 0 auto; /* center the nav within its parent */
+    display: flex; /* enables flexbox */
+    justify-content: center; /* centers the child elements horizontally */
+    align-items: center; /* centers the child elements vertically */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* aligns the list items in a row */
+    justify-content: center; /* centers the list items horizontally */
+    align-items: center; /* centers the list items vertically */
+    width: 100%; /* ensures the ul takes up the full width of the nav */
+}
+
+/* Styles for each list item */
+nav li {
+    padding: 0;
+    margin: 0 10px; /* margin between list items */
+}
+
+/* Styles for each navigation link */
+nav a {
+    text-decoration: none; /* removes underline from links */
+    color: white; /* white text color */
+    padding: 10px 15px; /* padding around the text */
+    border-radius: 8px; /* rounded corners */
+    transition: background-color 0.3s ease; /* smooth background color transition */
+}
+
+/* Style for the highlight effect */
+.highlight {
+    position: absolute;
+    background-color: #fff; /* color of the highlight */
+    border-radius: 8px; /* rounded corners */
+    transition: all 0.3s ease; /* smooth transition for the animation */
+    opacity: 0; /* start invisible */
+    pointer-events: none; /* makes sure clicks go through the highlight */
+    z-index: 0; /* ensures it's under the text */
+}
+
+/* Additional styles for when a navigation link is active */
+nav a.active {
+    background-color: #666; /* darker background for the active link */
+}
+
+/* Optional: Styles for hover effect */
+nav a:hover {
+    background-color: #00FF00 /* lighter background when hovering */
+}
+
+.home-image-container {
+    position: fixed; /* Fixed position relative to the viewport */
+    left: 200px; /* Distance from the left side of the viewport */
+    top: 250px; /* Distance from the top of the viewport */
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.home-image-container img {
+    display: block; /* This makes sure the image does not have inline white space below it */
+    max-width: 500px; /* This ensures the image is responsive and fits its container */
+    height: 500px; /* This maintains the aspect ratio of the image */
+}
+
+#terminal {
+    position: fixed;
+    right: 200px;
+    top: 53%;
+    transform: translateY(-50%);
+    width: 600px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    background-color: #000;
+    color: #33ff33;
+    border: 5px solid #33ff33; /* Thick green border */
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+    /* Removed overflow-y */
+    z-index: 10;
+    box-shadow: -10px 0px 10px -5px rgba(0,0,0,0.5);
+  }
+  
+  #terminal-text {
+    white-space: pre-wrap; /* Preserves both spaces and line breaks */
+  }
+  
+  
